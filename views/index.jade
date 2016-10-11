@@ -1,0 +1,26 @@
+extends layout
+block content
+  h1= title
+  div.container
+    div.panel.panel-default
+      div.panel-heading 
+        a(href="/student/add") 增加
+      table.table 
+        thead
+          tr
+            th #
+            th Name
+            th Age 
+            th Sex
+            th Settings
+        tbody
+        each item, i in data
+          tr 
+            td #{i+1}
+            td #{item.name}
+            td #{item.age}
+            td #{item.sex}
+            td
+              a(href="/student/detail?id=#{i+1}") 详情&nbsp;&nbsp;
+              a(href="/student/remove?id=#{i+1}") 删除&nbsp;&nbsp;
+              a(href="/student/edit?id=#{i+1}") 编辑

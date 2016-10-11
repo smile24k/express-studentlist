@@ -1,0 +1,21 @@
+extends layout
+block content
+  h1= title
+  div.container
+        h3
+            a(href="/student") 返回
+        form(role="form")
+            div.form-group
+                label(for="exanpleInputName") Name
+                input.form-control(type="text" value="#{data.name}")
+            div.form-group
+                label(for="exanpleInputName") Age
+                input.form-control(type="text" value="#{data.age}")
+            div.form-group
+                label(for="exanpleInputName") Sex
+                input.form-control(type="text" value="#{data.sex}")
+             div.form-group
+                label(for="exanpleInputName") Id
+                input.form-control(type="text" value="#{data.id}")   
+    
+

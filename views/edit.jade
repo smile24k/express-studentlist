@@ -1,0 +1,17 @@
+extends layout
+block content
+  h1= title
+  div.container
+        h3
+            a(href="/student") 返回
+        form(role="form" action="/editdata" method="post")
+            div.form-group
+                label(for="exanpleInputName") Name
+                input.form-control(type="text" value="#{data.name}" name="name")
+            div.form-group
+                label(for="exanpleInputName") Age
+                input.form-control(type="text" value="#{data.age}" name="age")
+            div.form-group
+                label(for="exanpleInputName") Sex
+                input.form-control(type="text" value="#{data.sex}" name="sex")  
+            button.btn.btn-default(type="submit") 提交
