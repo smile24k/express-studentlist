@@ -16,11 +16,11 @@ block content
         tbody
         each item, i in data
           tr 
-            td #{i+1}
+            td #{item.id}
             td #{item.name}
             td #{item.age}
             td #{item.sex}
             td
-              a(href="/student/detail?id=#{i+1}") 详情&nbsp;&nbsp;
-              a(href="/student/remove?id=#{i+1}") 删除&nbsp;&nbsp;
-              a(href="/student/edit?id=#{i+1}") 编辑
+              a(href="/student/detail?id=#{item.id}") 详情&nbsp;&nbsp;
+              a(href="/student/remove?id=#{item.id}") 删除&nbsp;&nbsp;
+              a(href="/student/edit?id=#{item.id}") 编辑
